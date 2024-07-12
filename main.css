@@ -1,0 +1,68 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+.navmenu{
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    /* border-radius: 80px; */
+    background: conic-gradient(
+        from 180deg at 50% 50%,
+        rgba(238, 206, 163, 0.7) -51.6deg,
+        rgba(153, 207, 238, 0.7) 46.63deg,
+        rgba(253, 220, 226, 0.7) 131.01deg,
+        rgba(250, 235, 206, 0.7) 228.46deg,
+        rgba(238, 206, 163, 0.7) 308.4deg,
+        rgba(153, 207, 238, 0.7) 406.63deg
+    );
+    transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* position: fixed; */
+}
+.navmenu:hover{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+}
+.navmenu:hover::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+#itema,#itemb,#itemc,#itemd{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+    background-color:burlywood;
+}
+#itemd:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+#itema:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+#itemb:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+#itemc:hover{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section h1 {
+    font-size: 3em;
+}
+.scrolled {
+    background-color: #555;
+}
