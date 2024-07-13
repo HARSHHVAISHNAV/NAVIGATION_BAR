@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .typing-animation {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            white-space: nowrap; /* Ensures letters appear on the same line */
+            overflow: hidden; /* Ensures only one letter is visible at a time */
+            border-right: .15em solid orange; /* Creates the typing cursor effect */
+            animation: typing 4s steps(10, end), blink-caret .5s step-end infinite;
+        }
+
+        /* Keyframes for typing animation */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* Blinking cursor animation */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        /* Style each letter */
+        .typing-animation .letter {
+            display: inline-block;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="typing-animation">
+        <span class="letter">H</span>
+        <span class="letter">e</span>
+        <span class="letter">l</span>
+        <span class="letter">l</span>
+        <span class="letter">o</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add a class to trigger the typing animation
+            document.querySelector('.typing-animation').classList.add('start-animation');
+        });
+    </script>
+</body>
+</html>

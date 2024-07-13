@@ -1,68 +1,72 @@
-html,body{
+html, body {
     margin: 0px;
     padding: 0px;
+    font-family: 'Poppins', sans-serif; 
 }
-.navmenu{
+
+.navmenu {
     display: flex;
-    border: 2px solid black;
+    border: 5px solid black;
     justify-content: space-around;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: black;
-    /* border-radius: 80px; */
-    background: conic-gradient(
-        from 180deg at 50% 50%,
-        rgba(238, 206, 163, 0.7) -51.6deg,
-        rgba(153, 207, 238, 0.7) 46.63deg,
-        rgba(253, 220, 226, 0.7) 131.01deg,
-        rgba(250, 235, 206, 0.7) 228.46deg,
-        rgba(238, 206, 163, 0.7) 308.4deg,
-        rgba(153, 207, 238, 0.7) 406.63deg
-    );
     transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* position: fixed; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
 }
-.navmenu:hover{
-    padding-top: 35px;
-    padding-bottom: 35px;
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+.navmenu:hover {
     overflow: scroll;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;
 }
+
 .navmenu:hover::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
-#itema,#itemb,#itemc,#itemd{
-    border: 2px solid black;
-    border-radius: 5px;
+
+#itema, #itemb, #itemc, #itemd {
+    border: 4px solid black;
     padding: 8px;
     font-size: 18px;
-    background-color:burlywood;
+    font-weight: bolder;
+    background-color: white;
+    color: black;
 }
-#itemd:hover{
+
+#itema:hover, #itemb:hover, #itemc:hover, #itemd:hover,
+#itema.active, #itemb.active, #itemc.active, #itemd.active {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background-color: black;
+    color: white;
+    transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-#itema:hover{
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-#itemb:hover{
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-#itemc:hover{
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
+
 section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 80px; /* Add padding to ensure content is not hidden behind the navbar */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+section.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 section h1 {
     font-size: 3em;
 }
+
 .scrolled {
     background-color: #555;
 }
