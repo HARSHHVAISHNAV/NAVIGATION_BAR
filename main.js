@@ -38,11 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add the 'active' class to the clicked button
             this.classList.add('active');
             
-            // Scroll to the corresponding section
-            const sectionId = this.id.substring(4).toLowerCase(); // Get the section id
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
+           
         });
     });
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownBtn = dropdown.querySelector('.dropdown-btn');
+    const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+    dropdownBtn.addEventListener('mouseover', function() {
+        dropdownContent.style.display = 'block';
+    });
+
+    dropdown.addEventListener('mouseleave', function() {
+        dropdownContent.style.display = 'none';
+    });
 });
+
+
+

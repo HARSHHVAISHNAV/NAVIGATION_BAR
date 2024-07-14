@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400|Open+Sans+Condensed:300');
+
+:root {
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
+    --tertiary-font: 'Open Sans Condensed', sans-serif;
+}
 html, body {
     margin: 0px;
     padding: 0px;
+    height: 100%;   
     font-family: 'Poppins', sans-serif; 
+    overflow-x: hidden;
 }
 
 .navmenu {
@@ -20,17 +29,8 @@ html, body {
     background-color: white;
 }
 
-.navmenu:hover {
-    overflow: scroll;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;
-}
 
-.navmenu:hover::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-}
-
-#itema, #itemb, #itemc, #itemd {
+#itema, #itemb, #itemc, #itemd,#iteme {
     border: 4px solid black;
     padding: 8px;
     font-size: 18px;
@@ -39,32 +39,85 @@ html, body {
     color: black;
 }
 
-#itema:hover, #itemb:hover, #itemc:hover, #itemd:hover,
-#itema.active, #itemb.active, #itemc.active, #itemd.active {
+#itema:hover, #itemb:hover, #itemc:hover, #itemd:hover,#iteme:hover
+#itema.active, #itemb.active, #itemc.active, #itemd.active,#iteme.active {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     background-color: black;
     color: white;
     transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 80px; /* Add padding to ensure content is not hidden behind the navbar */
-    opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-section.show {
-    opacity: 1;
-    transform: translateX(0);
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-section h1 {
-    font-size: 3em;
+.dropdown-content a {
+    color: black;
+    padding: 10px 40px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#header {
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    background: linear-gradient(to right, #fbc2eb 0%, #a18cd1 100%);
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#headera {
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#headerb {
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    background: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#headerc {
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#title {
+    position: absolute;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    margin-top: -20px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .scrolled {
